@@ -12,5 +12,9 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  
+  addRequirement(){
+    console.log("req_added");
+  }
 
 }
