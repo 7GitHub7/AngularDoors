@@ -9,8 +9,8 @@ import { Requiremnt } from "../../Requiremnt";
 export class TableComponent implements OnInit {
 
   requirments:Requiremnt[] = [];
-  // displayedColumns: string[] = ['id', 'description', 'createdBy', 'email','requirementDescription','created','reviewStatus','comment'];
-  displayedColumns: string[] = ['id', 'description'];
+  displayedColumns: string[] = ['id', 'description', 'createdBy', 'email','requirementDescription','created','reviewStatus','comment'];
+  // displayedColumns: string[] = ['id', 'description'];
 
   constructor(private requirementService: RequiermentService) { }
 
