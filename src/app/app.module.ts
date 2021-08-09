@@ -3,6 +3,9 @@ import { NgModule } from '@angular/core';
 import { HttpClientModule } from "@angular/common/http";
 import { FormsModule } from "@angular/forms";
 import { RouterModule,Routes } from "@angular/router";
+import { MatTableModule } from '@angular/material/table'  
+
+
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -13,6 +16,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { AddTaskComponent } from './components/add-task/add-task.component';
 import { AboutComponent } from './components/about/about.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { TableComponent } from './components/table/table.component';
+
 
 const appRoutes: Routes = [
   {path: '', component: TasksComponent},
@@ -28,15 +33,18 @@ const appRoutes: Routes = [
     TaskItemComponent,
     AddTaskComponent,
     AboutComponent,
-    FooterComponent
+    FooterComponent,
+    TableComponent
     
   ],
   imports: [
+    MatTableModule,
     BrowserModule,
     HttpClientModule,
     FontAwesomeModule,
     FormsModule,
-    RouterModule.forRoot(appRoutes,{enableTracing:true})
+    RouterModule.forRoot(appRoutes,{enableTracing:true}),
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
