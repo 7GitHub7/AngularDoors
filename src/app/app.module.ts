@@ -4,6 +4,8 @@ import { HttpClientModule } from "@angular/common/http";
 import { FormsModule } from "@angular/forms";
 import { RouterModule,Routes } from "@angular/router";
 import { MatTableModule } from '@angular/material/table'
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; 
 
 
 
@@ -38,6 +40,8 @@ const appRoutes: Routes = [
     
   ],
   imports: [
+    BrowserAnimationsModule,
+    MatPaginatorModule,
     MatTableModule,
     BrowserModule,
     HttpClientModule,
