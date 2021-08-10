@@ -1,12 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from "@angular/common/http";
+import { FormsModule } from "@angular/forms";
 import { RouterModule,Routes } from "@angular/router";
 import { MatTableModule } from '@angular/material/table'
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import {MatCheckboxModule} from '@angular/material/checkbox';
-
-
 
 
 
@@ -47,8 +44,6 @@ const appRoutes: Routes = [
     FontAwesomeModule,
     FormsModule,
     RouterModule.forRoot(appRoutes,{enableTracing:true}),
-    ReactiveFormsModule,
-    MatCheckboxModule
     
   ],
   providers: [],
