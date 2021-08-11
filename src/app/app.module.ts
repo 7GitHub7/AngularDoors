@@ -2,11 +2,11 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from "@angular/common/http";
 import { FormsModule } from "@angular/forms";
-import { RouterModule,Routes } from "@angular/router";
+import { RouterModule, Routes } from "@angular/router";
 import { MatTableModule } from '@angular/material/table'
 import { MatPaginatorModule } from '@angular/material/paginator';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; 
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {  MatSidenavModule } from '@angular/material/sidenav';
 
 
 import { AppComponent } from './app.component';
@@ -19,11 +19,17 @@ import { AddTaskComponent } from './components/add-task/add-task.component';
 import { AboutComponent } from './components/about/about.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { TableComponent } from './components/table/table.component';
+import { SidenavComponent } from './components/sidenav/sidenav.component';
+
+
 
 
 const appRoutes: Routes = [
-  {path: '', component: TasksComponent},
-  {path: 'about', component: AboutComponent}
+  // {path: '', component: TasksComponent},
+  { path: '', component: TableComponent },
+  { path: 'about', component: AboutComponent },
+  { path: 'sidebar', component: SidenavComponent }
+
 ]
 
 @NgModule({
@@ -36,10 +42,11 @@ const appRoutes: Routes = [
     AddTaskComponent,
     AboutComponent,
     FooterComponent,
-    TableComponent
-    
+    TableComponent,
+    SidenavComponent,
   ],
   imports: [
+    MatSidenavModule,
     BrowserAnimationsModule,
     MatPaginatorModule,
     MatTableModule,
@@ -47,8 +54,8 @@ const appRoutes: Routes = [
     HttpClientModule,
     FontAwesomeModule,
     FormsModule,
-    RouterModule.forRoot(appRoutes,{enableTracing:true}),
-    
+    RouterModule.forRoot(appRoutes, { enableTracing: true }),
+
   ],
   providers: [],
   bootstrap: [AppComponent]
