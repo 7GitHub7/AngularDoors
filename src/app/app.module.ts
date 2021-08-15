@@ -8,6 +8,8 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatIconModule} from '@angular/material/icon';
+
 
 
 import { AppComponent } from './app.component';
@@ -49,6 +51,7 @@ const appRoutes: Routes = [
     ToolbarComponent,
   ],
   imports: [
+    MatIconModule,
     MatToolbarModule,
     MatSidenavModule,
     BrowserAnimationsModule,
