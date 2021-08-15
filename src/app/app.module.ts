@@ -9,6 +9,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
+import { MatListModule } from "@angular/material/list";
 
 
 
@@ -24,6 +25,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { TableComponent } from './components/table/table.component';
 import { SidenavComponent } from './components/sidenav/sidenav.component';
 import { ToolbarComponent } from './components/toolbar/toolbar.component';
+
 
 
 
@@ -51,6 +53,7 @@ const appRoutes: Routes = [
     ToolbarComponent,
   ],
   imports: [
+    MatListModule,
     MatIconModule,
     MatToolbarModule,
     MatSidenavModule,

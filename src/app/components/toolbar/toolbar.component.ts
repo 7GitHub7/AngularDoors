@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { UiService } from "../../services/ui.service";
 
 
@@ -8,14 +8,14 @@ import { UiService } from "../../services/ui.service";
   styleUrls: ['./toolbar.component.css']
 })
 export class ToolbarComponent implements OnInit {
-
+  @Output() onButtonSidenavClick: EventEmitter<any> = new EventEmitter()
   constructor(private uiService: UiService) { }
 
   ngOnInit(): void {
   }
 
   openSideNav(){
-    this.uiService.openSideNav();
+    this.onButtonSidenavClick.emit()
   }
 
 }

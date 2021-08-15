@@ -1,11 +1,15 @@
-
 <mat-sidenav-container fullscreen>
-<!-- <div class="container"> -->
-    <app-toolbar></app-toolbar>
-    <router-outlet></router-outlet>
-    
-    <!-- <app-footer></app-footer> -->
-    <!-- <app-table> </app-table> -->
-<!-- </div> -->
+
+  <mat-sidenav #sidenav [fixedInViewport]="true" mode="push" mode="over" opened="false" >
+    <mat-nav-list>
+        <mat-list-item role="listitem">Item 1</mat-list-item>
+        <mat-list-item role="listitem">Item 2</mat-list-item>
+        <mat-list-item role="listitem">Item 3</mat-list-item>
+    </mat-nav-list>
+  </mat-sidenav>
+  
+
+  <app-toolbar (onButtonSidenavClick) = "sidenav.toggle()"></app-toolbar>
+  <router-outlet></router-outlet>
 </mat-sidenav-container>
 
