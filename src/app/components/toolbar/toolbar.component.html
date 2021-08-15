@@ -1,15 +1,19 @@
-<mat-toolbar>
-    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+<mat-sidenav #sidenav [fixedInViewport]="true" mode="push">
+  This is the sidenav, yay
+</mat-sidenav>
+
+<p>
+  <mat-toolbar>
+    <button mat-icon-button aria-label="Menu" (click)="sidenav.open()">
       <mat-icon>menu</mat-icon>
     </button>
-    <span>My App</span>
+    <span> My App</span>
     <span class="example-spacer"></span>
-    <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
-      <mat-icon aria-hidden="false" aria-label="Example home icon">favorite</mat-icon>
+    <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon" (click)="sidenav.close()">
+      <mat-icon>favorite</mat-icon>
     </button>
     <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
       <mat-icon>share</mat-icon>
-      <mat-icon aria-hidden="false" aria-label="Example home icon">home</mat-icon>
-
     </button>
   </mat-toolbar>
+</p>

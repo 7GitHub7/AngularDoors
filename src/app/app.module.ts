@@ -29,7 +29,7 @@ import { ToolbarComponent } from './components/toolbar/toolbar.component';
 
 
 const appRoutes: Routes = [
-  // {path: '', component: TasksComponent},
+  // { path: '', component: TasksComponent},
   { path: '', component: TableComponent },
   { path: 'about', component: AboutComponent },
   { path: 'sidebar', component: SidenavComponent }
