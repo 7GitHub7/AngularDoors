@@ -10,6 +10,10 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
 import { MatListModule } from "@angular/material/list";
+import {MatFormFieldModule} from '@angular/material/form-field'
+import {MatDialogModule} from '@angular/material/dialog';
+import {MatButtonModule} from '@angular/material/button';
+
 
 
 
@@ -25,7 +29,9 @@ import { FooterComponent } from './components/footer/footer.component';
 import { TableComponent } from './components/table/table.component';
 import { SidenavComponent } from './components/sidenav/sidenav.component';
 import { ToolbarComponent } from './components/toolbar/toolbar.component';
-
+import { DialogComponent } from './components/dialog/dialog.component';
+import { DialogOverviewExampleDialog } from './components/dialog/dialog.component';
+import { MatInputModule } from '@angular/material/input';
 
 
 
@@ -34,7 +40,8 @@ const appRoutes: Routes = [
   // { path: '', component: TasksComponent},
   { path: '', component: TableComponent },
   { path: 'about', component: AboutComponent },
-  { path: 'sidebar', component: SidenavComponent }
+  { path: 'sidebar', component: SidenavComponent },
+  { path: 'dialog', component: DialogComponent }
 
 ]
 
@@ -51,8 +58,14 @@ const appRoutes: Routes = [
     TableComponent,
     SidenavComponent,
     ToolbarComponent,
+    DialogComponent,
+    DialogOverviewExampleDialog,
   ],
   imports: [
+    MatButtonModule,
+    MatInputModule,
+    MatDialogModule,
+    MatFormFieldModule,
     MatListModule,
     MatIconModule,
     MatToolbarModule,
